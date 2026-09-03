@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DeepCheck Classroom Report - DC-2R5G</title>
+    <style>
+        @media print {
+            body { background: #fff; color: #000; }
+            .no-print { display: none; }
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            padding: 32px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #3b82f6;
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+        .brand {
+            font-size: 24px;
+            font-weight: 800;
+            color: #38bdf8;
+            letter-spacing: -0.5px;
+        }
+        .session-code {
+            background: #3b82f6;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 28px;
+        }
+        .meta-card {
+            background: #0f172a;
+            padding: 14px;
+            border-radius: 8px;
+            border: 1px solid #334155;
+        }
+        .meta-label { font-size: 11px; text-transform: uppercase; color: #94a3b8; letter-spacing: 0.5px; }
+        .meta-val { font-size: 18px; font-weight: bold; color: #f8fafc; margin-top: 4px; }
+        
+        h2 { font-size: 18px; color: #38bdf8; margin-top: 24px; border-bottom: 1px solid #334155; padding-bottom: 8px; }
+        
+        .indicator-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .ind-name { width: 260px; font-size: 14px; font-weight: 500; }
+        .bar-container { flex-grow: 1; background: #0f172a; height: 10px; border-radius: 5px; overflow: hidden; margin: 0 12px; }
+        .bar-fill { background: linear-gradient(90deg, #3b82f6, #ec4899); height: 100%; border-radius: 5px; }
+        .ind-count { width: 90px; text-align: right; font-size: 13px; font-weight: bold; color: #94a3b8; }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            font-size: 13px;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid #334155;
+        }
+        th {
+            background: #0f172a;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 11px;
+        }
+        .tag {
+            background: #334155;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .sig-cell { color: #cbd5e1; max-width: 280px; font-size: 12px; }
+        
+        .disclaimer-box {
+            margin-top: 32px;
+            padding: 14px 18px;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 8px;
+            color: #fca5a5;
+            font-size: 12px;
+            line-height: 1.5;
+        }
+        
+        .no-print-btn {
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            float: right;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="no-print-btn no-print" onclick="window.print()">Print / Save PDF</button>
+        <div class="header">
+            <div>
+                <div class="brand">DeepCheck Classroom</div>
+                <div style="color: #94a3b8; font-size: 13px; margin-top: 4px;">Classroom Session Summary Report</div>
+            </div>
+            <div class="session-code">SESSION: DC-2R5G</div>
+        </div>
+
+        <div class="meta-grid">
+            <div class="meta-card">
+                <div class="meta-label">Educator</div>
+                <div class="meta-val">Prof. Alan Turing</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">Topic</div>
+                <div class="meta-val">AI Media Literacy & Heuristics</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">Total Submissions</div>
+                <div class="meta-val">3</div>
+            </div>
+            <div class="meta-card">
+                <div class="meta-label">Avg Heuristic Score</div>
+                <div class="meta-val">9.2%</div>
+            </div>
+        </div>
+
+        <h2>Top Flagged AI Generation Indicators</h2>
+        <div style="margin-top: 14px;">
+            <p class='no-data'>No detected indicator anomalies recorded in this session yet.</p>
+        </div>
+
+        <h2>Student Submissions Activity Log</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Student Name</th>
+                    <th>Media</th>
+                    <th>Heuristic Score</th>
+                    <th>Signals</th>
+                    <th>Flagged Anomaly Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td>#1</td>
+            <td><strong>Alice Chen</strong></td>
+            <td><span class="tag">IMAGE</span></td>
+            <td><strong>8.9%</strong></td>
+            <td>0 of 6</td>
+            <td class="sig-cell">None (Clean)</td>
+        </tr>
+        
+        <tr>
+            <td>#2</td>
+            <td><strong>Bob Miller</strong></td>
+            <td><span class="tag">VIDEO</span></td>
+            <td><strong>9.7%</strong></td>
+            <td>0 of 6</td>
+            <td class="sig-cell">None (Clean)</td>
+        </tr>
+        
+        <tr>
+            <td>#3</td>
+            <td><strong>Charlie Zhang</strong></td>
+            <td><span class="tag">IMAGE</span></td>
+            <td><strong>8.9%</strong></td>
+            <td>0 of 6</td>
+            <td class="sig-cell">None (Clean)</td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <div class="disclaimer-box">
+            <strong>EDUCATIONAL DISCLAIMER:</strong> This tool flags common AI-generation patterns for educational purposes. It is not forensically certified and should not be used as sole evidence of authenticity.
+            <div style="margin-top: 4px; color: #94a3b8; font-size: 11px;">Generated on 2026-08-29 20:41:32 via DeepCheck Classroom In-Memory Engine. Zero persistent database records.</div>
+        </div>
+    </div>
+</body>
+</html>
